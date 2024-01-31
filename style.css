@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'poppnis' , sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+    background: linear-gradient(135deg , #153766 , #4e085f);
+}
+.to-do-app{
+    width: 100%;
+    max-width: 540px;
+    background-color: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.to-do-app h3{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.to-do-app h3 img{
+    width: 30px;
+    margin-left: 10px;
+}
+.input-todo{
+    padding-left: 20px;
+    margin-top: 15px;
+    background-color: rgb(230, 230, 224);
+    border-radius: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background: transparent;
+    color: #4c5f80;
+}
+button{
+    background-color: #ff5947;
+    border: none;
+    outline: none;
+    padding: 16px 30px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    border-top-right-radius: 23px;
+    border-bottom-right-radius: 23px;
+    cursor: pointer;
+}
+input::placeholder{
+    color: #4c5f80;
+    font-size: 17px;
+}
+ul li{
+    margin-top: 5px;
+    list-style: none;
+    font-size: 14px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    color: #444242;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: url('To-Do-Img/images/unchecked.png');
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 8px;
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+    
+}
+ul li.checked::before{
+    background-image: url('To-Do-Img/images/checked.png');
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 12px;
+    width: 40px;
+    height: 40px;
+    color: #555;
+    font-size: 22px;
+    line-height: 40px;
+    align-items: center;
+
+}
+
+.alert{
+    color: red;
+    font-size: 15px;
+    display: none;
+}
+.alert-success{
+    color: rgb(0, 255, 76);
+    font-size: 15px;
+    display: none;
+}
